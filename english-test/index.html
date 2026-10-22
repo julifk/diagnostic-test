@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>English Level Test (A1–C1)</title>
+<style>
+:root{--g1:#f3f5ff;--g2:#fdeef0;--card:#fff;--tx:#1f2233;--mut:#6a6f85;--ac:#1f3a93;--ac2:#c8102e;--ok:#22a06b;--bd:#e3e5ef;--sky:#d3dcf7;--sun:#c8102e;--h1:#8fd3a8;--h2:#5fb88a;--pri2:#3b55c4;--shadow:31,58,147;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--card:#1f2440;--bd:#343b63;--tx:#f1f2f8;--mut:#a4aac9;--ok:#4cc38a;--h1:#2f7a5a;--h2:#256348;--g1:#12172e;--g2:#1d1224;--sky:#2a3566;--ac:#8aa4ff;--ac2:#ff5c72;--sun:#ff5c72}}
+:root[data-theme="dark"]{--card:#1f2440;--bd:#343b63;--tx:#f1f2f8;--mut:#a4aac9;--ok:#4cc38a;--h1:#2f7a5a;--h2:#256348;--g1:#12172e;--g2:#1d1224;--sky:#2a3566;--ac:#8aa4ff;--ac2:#ff5c72;--sun:#ff5c72}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}
+body{background:linear-gradient(160deg,var(--g1),var(--g2)) fixed;color:var(--tx);font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5;padding:16px}
+.w{max-width:640px;margin:0 auto}
+.card{background:var(--card);border-radius:22px;padding:24px;box-shadow:0 10px 40px rgba(var(--shadow),.18);overflow:hidden}
+h1{font-size:1.7rem;margin:6px 0;line-height:1.2}p{margin:8px 0}.m{color:var(--mut);font-size:.92rem}.c{text-align:center}
+button{font:inherit;cursor:pointer;border-radius:14px;border:2px solid var(--bd);background:var(--card);color:var(--tx);padding:13px 16px;text-align:left;width:100%;margin-top:9px;transition:.15s}
+button:hover{border-color:var(--ac);transform:translateY(-1px)}
+.pri{background:linear-gradient(135deg,var(--ac),var(--pri2));color:#fff;border:0;text-align:center;font-weight:800;font-size:1.05rem;box-shadow:0 6px 18px rgba(var(--shadow),.35)}
+.pri:disabled{opacity:.7;cursor:default;transform:none}
+.sec{text-align:center;color:var(--mut);border-style:dashed}
+.top{display:flex;justify-content:space-between;font-size:.85rem;color:var(--mut);margin-bottom:6px}
+.bar{height:10px;background:var(--bd);border-radius:6px;overflow:hidden;margin-bottom:18px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--ac2));border-radius:6px;transition:width .4s}
+.tag{display:inline-block;font-size:.75rem;font-weight:800;color:var(--ac);background:var(--sky);padding:3px 10px;border-radius:20px}
+.q{font-size:1.3rem;font-weight:800;margin:10px 0 12px}
+.big{font-size:4.2rem;font-weight:900;text-align:center;line-height:1;margin:4px 0;background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:.9rem}
+.row b{width:28px}.row .t{flex:1;height:12px;background:var(--bd);border-radius:6px;overflow:hidden}
+.row .t i{display:block;height:100%;background:var(--ok);border-radius:6px}.row span{width:34px;text-align:right;color:var(--mut)}
+.nx{text-align:center;font-weight:800;color:var(--ac);background:var(--sky);border-radius:14px;padding:10px 14px;margin:14px 0 4px}
+.free{font-weight:800;color:var(--ac);margin:8px 0 2px}
+input,textarea{font:inherit;width:100%;padding:12px 14px;border-radius:12px;border:2px solid var(--bd);background:var(--card);color:var(--tx);margin-top:8px}
+input:focus,textarea:focus{outline:none;border-color:var(--ac)}
+.box{background:var(--g2);border-radius:16px;padding:16px;margin-top:18px;border:2px solid var(--sky)}
+svg{display:block;width:100%;height:auto}
+.cf{position:fixed;top:-20px;width:9px;height:14px;border-radius:2px;animation:fall linear forwards;pointer-events:none;z-index:9}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.8}}
+@media (prefers-reduced-motion:reduce){.cf{display:none}}
+.back{display:inline-block;margin:0 0 10px 4px;font-weight:800;font-size:.95rem;color:var(--ac);text-decoration:none}.back:hover,.back:focus-visible{text-decoration:underline}
+</style></head><body><div class="w"><a class="back" href="../home/">← Avaleht · Главная страница</a><div class="card" id="app"></div></div>
+<script>
+var L=["A1","A2","B1","B2","C1"];
+var Q=[
+["A1","She ___ a teacher.",["is","are","am","be"]],
+["A1","___ you like pizza?",["Do","Does","Are","Is"]],
+["A1","There ___ two books on the table.",["are","is","am","be"]],
+["A1","This is my brother. ___ name is Tom.",["His","He","Him","Her"]],
+["A1","A ___ is a place where you can buy bread and cakes.",["bakery","library","pharmacy","bank"]],
+["A1","My mother’s mother is my ___.",["grandmother","aunt","niece","cousin"]],
+["A2","Yesterday I ___ to the cinema.",["went","go","gone","going"]],
+["A2","My sister is ___ than me.",["taller","tall","more tall","tallest"]],
+["A2","I’m ___ to visit Italy next summer.",["going","go","went","will"]],
+["A2","We ___ TV when the phone rang.",["were watching","watched","are watching","watch"]],
+["A2","You ___ smoke here. It’s forbidden.",["mustn’t","don’t have to","needn’t","may"]],
+["A2","Could you ___ me your pen, please? I forgot mine.",["lend","borrow","rent","steal"]],
+["B1","If it rains tomorrow, we ___ at home.",["will stay","would stay","stayed","had stayed"]],
+["B1","I have lived here ___ 2015.",["since","for","from","during"]],
+["B1","Could you tell me where ___?",["the station is","is the station","the station be","does the station"]],
+["B1","He’s the man ___ car was stolen.",["whose","who","which","who’s"]],
+["B1","I’m not used ___ up early.",["to getting","to get","getting","get"]],
+["B1","I can’t come tonight. I have to ___ my little brother.",["look after","look for","look at","look up"]],
+["B2","If I ___ harder, I would have passed the exam.",["had studied","studied","would study","have studied"]],
+["B2","By this time next year, she ___ her degree.",["will have finished","will finish","finishes","is finishing"]],
+["B2","I wish I ___ more time to travel.",["had","have","would have","has"]],
+["B2","He suggested ___ a taxi.",["taking","to take","take","to taking"]],
+["B2","The company decided to ___ the launch until spring because of the delays.",["postpone","prevent","pretend","proceed"]],
+["B2","The meeting was called off ___ the manager’s illness.",["owing to","despite","in case","as to"]],
+["C1","Not only ___ late, but he also forgot the documents.",["did he arrive","he arrived","he did arrive","arrived he"]],
+["C1","The new policy has been widely ___ as a step forward.",["hailed","hauled","hung","heaped"]],
+["C1","He is believed ___ the country before the investigation began.",["to have left","to leave","having left","that left"]],
+["C1","It’s high time we ___ a decision.",["made","make","will make","have made"]],
+["C1","The company is on the ___ of bankruptcy.",["verge","border","fringe","rim"]],
+["C1","No sooner had he sat down ___ the phone rang.",["than","when","that","then"]]
+];
+var T={"title": ["What’s your English level?", "Mis on sinu inglise keele tase?", "Какой у вас уровень английского?"], "sub": ["A friendly test from A1 to C1 · about 15 minutes · {n} questions · the questions are in English", "Sõbralik test tasemetel A1 kuni C1 · umbes 15 minutit · {n} küsimust · küsimused on inglise keeles", "Дружелюбный тест от A1 до C1 · около 15 минут · {n} вопросов · вопросы на английском"], "intro": ["The questions get harder as you go. Not sure of an answer? Press “I don’t know”. You can also stop at any moment and see your level.", "Küsimused muutuvad järk-järgult raskemaks. Ei tea vastust? Vajuta „Ei tea”. Võid igal hetkel peatuda ja oma taset näha.", "Вопросы постепенно усложняются. Не знаете ответ? Нажмите «Не знаю». Вы можете остановиться в любой момент и увидеть свой уровень."], "startb": ["Start the test ✨", "Alusta testi ✨", "Начать тест ✨"], "idk": ["I don’t know", "Ei tea", "Не знаю"], "stop": ["Stop here and show my level", "Peatu siin ja näita minu taset", "Остановиться и показать мой уровень"], "well": ["🎉 Well done!", "🎉 Suurepärane!", "🎉 Отлично!"], "ans": ["You answered {a} of {b} questions. Your level is", "Sa vastasid {a} küsimusele {b}-st. Sinu tase on:", "Вы ответили на {a} из {b} вопросов. Ваш уровень:"], "beg": ["Absolute beginner", "Päris algaja", "Абсолютный новичок"], "note": ["Your level is the highest one where you got at least 4 of 6 right, with all lower levels passed. This is a quick estimate, not an official exam.", "Sinu tase on kõrgeim, kus vastasid õigesti vähemalt 4 küsimusele 6-st ning kõik madalamad tasemed on läbitud. See on kiire hinnang, mitte ametlik eksam.", "Ваш уровень – самый высокий, на котором вы ответили правильно минимум на 4 из 6 вопросов, при условии что все предыдущие уровни пройдены. Это быстрая оценка, а не официальный экзамен."], "nxt": ["Your next goal: {l}. You are closer than you think! 🚀", "Sinu järgmine eesmärk: {l}. Oled lähemal, kui arvad! 🚀", "Ваша следующая цель: {l}. Вы ближе, чем думаете! 🚀"], "top": ["You reached the top level. Let’s polish it to perfection! 🏆", "Sa jõudsid kõrgeimale tasemele. Lihvime selle täiuslikuks! 🏆", "Вы достигли высшего уровня. Давайте отшлифуем его до совершенства! 🏆"], "ft": ["💬 Copy your result and send it to Julia!", "💬 Kopeeri oma tulemus ja saada see Juliale!", "💬 Скопируйте результат и отправьте Юлии!"], "fs": ["You did it, and that already takes courage! 🎉 Press the button to copy your result, then paste it for Julia on the website in the language you chose – she will reply personally and help you reach the next level.", "Sa tegid selle ära ja see nõuab juba julgust! 🎉 Vajuta nuppu, et tulemus kopeerida, ja kleebi see Juliale veebilehel sinu valitud keeles – ta vastab isiklikult ja aitab sul jõuda järgmisele tasemele.", "Вы справились, а это уже смелый шаг! 🎉 Нажмите кнопку, скопируйте результат и вставьте его для Юлии на сайте на выбранном вами языке – она ответит лично и поможет вам достичь следующего уровня."], "free": ["🎁 Send it and get a free lesson!", "🎁 Saada ja saa tasuta tund!", "🎁 Отправьте и получите бесплатный урок!"], "cp": ["Copy my results", "Kopeeri tulemused", "Скопировать результаты"], "cpd": ["Copied ✓", "Kopeeritud ✓", "Скопировано ✓"], "again": ["Take the test again", "Tee test uuesti", "Пройти тест заново"]};
+var NM={"A1": ["Beginner", "Algaja", "Начальный"], "A2": ["Elementary", "Põhitase", "Элементарный"], "B1": ["Intermediate", "Kesktase", "Средний"], "B2": ["Upper-intermediate", "Kõrgem kesktase", "Выше среднего"], "C1": ["Advanced", "Edasijõudnud", "Продвинутый"]};
+var CANL={"A0": ["You are at the very start of your English journey, and that is a great place to begin!", "Oled oma inglise keele õppimise tee alguses – suurepärane koht alustamiseks!", "Вы в самом начале пути в изучении английского – отличное место для старта!"], "A1": ["You understand and use familiar everyday expressions and very basic phrases.", "Sa saad aru tuttavatest igapäevastest väljenditest ja kasutad neid ning oskad väga lihtsaid fraase.", "Вы понимаете и используете знакомые повседневные выражения и совсем простые фразы."], "A2": ["You can talk about routines, family, shopping and simple events in the past.", "Sa oskad rääkida igapäevarutiinist, perest, ostlemisest ja lihtsatest minevikusündmustest.", "Вы можете говорить о распорядке дня, семье, покупках и простых событиях в прошлом."], "B1": ["You can handle most travel situations and describe experiences, plans and opinions.", "Sa saad hakkama enamikus reisiolukordades ning oskad kirjeldada kogemusi, plaane ja arvamusi.", "Вы справляетесь с большинством ситуаций в поездках и можете рассказать об опыте, планах и мнениях."], "B2": ["You can interact fluently and discuss a wide range of topics in detail.", "Sa suhtled ladusalt ja oskad üksikasjalikult arutada väga erinevatel teemadel.", "Вы можете свободно общаться и подробно обсуждать самые разные темы."], "C1": ["You can express yourself fluently and precisely for social, academic and professional purposes.", "Sa väljendud ladusalt ja täpselt nii igapäevaelus, õpingutes kui ka tööl.", "Вы выражаете мысли свободно и точно в быту, учёбе и работе."]};
+var MSG=["Hi Julia! I just did your English level test and I would like my free lesson.\nLevel: {lv} ({sc})\nAnswered: {a}/{b} in {m} min {s} s", "Tere, Julia! Tegin just sinu inglise keele tasemetesti ära ja sooviksin oma tasuta tundi.\nTase: {lv} ({sc})\nVastatud: {a}/{b} küsimust, aeg: {m} min {s} s", "Здравствуйте, Юлия! Я только что прошёл(-ла) ваш тест на уровень английского и хочу получить бесплатный урок.\nУровень: {lv} ({sc})\nОтвечено: {a}/{b} вопросов, время: {m} мин {s} с"];
+var LBL=["Name", "Nimi", "Имя"];
+var CONF=["#1f3a93", "#c8102e", "#ffffff", "#8aa4ff", "#ff8d9c"];
+var CODES=["en","et","ru"];
+var app=document.getElementById("app"),i,ans,res,t0,timer,LV,SC,miss,secs,msg;
+var lang=0,scr="start";
+function sh(a){a=a.slice();for(var k=a.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1)),x=a[k];a[k]=a[j];a[j]=x}return a}
+function hero(){return '<svg viewBox="0 0 320 150" role="img" aria-label="Union Jack flag and a red London bus with speech bubbles saying Hello and How are you"><rect width="320" height="150" rx="18" fill="var(--sky)"/><g transform="translate(196 18)"><rect width="110" height="55" fill="#1f3a93"/><path d="M0 0L110 55M110 0L0 55" stroke="#fff" stroke-width="9"/><path d="M0 0L110 55M110 0L0 55" stroke="#c8102e" stroke-width="3.5"/><path d="M55 0v55M0 27.5h110" stroke="#fff" stroke-width="16"/><path d="M55 0v55M0 27.5h110" stroke="#c8102e" stroke-width="9"/></g><rect y="124" width="320" height="26" fill="#8c92a8"/><path d="M0 137h320" stroke="#fff" stroke-width="2" stroke-dasharray="14 10"/><g><rect x="186" y="82" width="110" height="46" rx="7" fill="#c8102e"/><g fill="#d3dcf7"><rect x="194" y="89" width="18" height="12" rx="2"/><rect x="216" y="89" width="18" height="12" rx="2"/><rect x="238" y="89" width="18" height="12" rx="2"/><rect x="260" y="89" width="18" height="12" rx="2"/><rect x="194" y="107" width="18" height="12" rx="2"/><rect x="216" y="107" width="18" height="12" rx="2"/><rect x="260" y="107" width="26" height="18" rx="2"/></g><circle cx="210" cy="130" r="8" fill="#1f2233"/><circle cx="272" cy="130" r="8" fill="#1f2233"/></g><g><rect x="18" y="12" width="92" height="34" rx="16" fill="#fff"/><path d="M44 46l-8 14 22-14z" fill="#fff"/><text x="64" y="36" text-anchor="middle" font-size="18" font-weight="800" fill="#1f3a93" font-family="Nunito,system-ui,sans-serif">Hello!</text></g><g><rect x="40" y="62" width="118" height="34" rx="16" fill="#c8102e"/><path d="M130 96l8 13-22-13z" fill="#c8102e"/><text x="99" y="84" text-anchor="middle" font-size="15" font-weight="800" fill="#fff" font-family="Nunito,system-ui,sans-serif">How are you?</text></g></svg>'.replace(/'/g,"'")}
+function stairs(n){var h='<svg viewBox="0 0 300 130" role="img" aria-label="Level steps">';for(var k=0;k<5;k++){var ht=24+k*20,y=110-ht,on=k<=n;h+='<rect x="'+(k*58+4)+'" y="'+y+'" width="52" height="'+ht+'" rx="8" fill="'+(on?"var(--ac)":"var(--bd)")+'"'+(k==n?' stroke="var(--ac2)" stroke-width="3"':'')+'/><text x="'+(k*58+30)+'" y="'+(y+20)+'" text-anchor="middle" font-size="14" font-weight="800" fill="'+(on?"#fff":"var(--mut)")+'" font-family="Nunito,system-ui,sans-serif">'+L[k]+'</text>'}
+if(n>=0){var fx=n*58+30,fy=110-(24+n*20)-8;h+='<path d="M'+fx+' '+fy+'v-26" stroke="var(--tx)" stroke-width="2.5"/><path d="M'+fx+' '+(fy-26)+'l20 7-20 7z" fill="var(--ac2)"/>'}else{h+='<text x="150" y="30" text-anchor="middle" font-size="22">🌱</text>'}
+return h+'</svg>'}
+function t(k){return T[k][lang]}
+function pills(){return '<div style="display:flex;gap:6px;justify-content:center;margin-bottom:12px">'+["EN","ET","RU"].map(function(x,n){return '<button style="width:auto;margin:0;padding:6px 14px;text-align:center;font-weight:800;'+(n==lang?'background:var(--ac);color:#fff;border-color:var(--ac)':'')+'" onclick="setLang('+n+')">'+x+'</button>'}).join("")+'</div>'}
+function setLang(n){lang=n;document.documentElement.lang=CODES[n];if(scr=="start")start();else if(scr=="q")show();else fin(true)}
+function start(){scr="start";clearInterval(timer);app.innerHTML=pills()+hero()+'<h1 class="c">'+t("title")+'</h1><p class="c">'+t("sub").replace("{n}",Q.length)+'</p><p class="m c">'+t("intro")+'</p><button class="pri" onclick="go()">'+t("startb")+'</button>'}
+function go(){i=0;ans=[];t0=Date.now();clearInterval(timer);timer=setInterval(tick,1000);show()}
+function tick(){var e=document.getElementById("tm");if(!e)return;var s=Math.floor((Date.now()-t0)/1000);e.textContent="⏱ "+Math.floor(s/60)+":"+("0"+s%60).slice(-2)}
+function show(){
+scr="q";if(i>=Q.length)return fin();
+var q=Q[i],o=sh(q[2].map(function(x,n){return[x,n==0]}));
+var h=pills()+'<div class="top"><span class="tag">'+(i+1)+' / '+Q.length+'</span><span id="tm">⏱ 0:00</span></div><div class="bar"><i style="width:'+(i/Q.length*100)+'%"></i></div><p class="q">'+q[1]+'</p>';
+o.forEach(function(x){h+='<button data-c="'+(x[1]?1:0)+'">'+x[0]+'</button>'});
+h+='<button class="sec" data-c="2">'+t("idk")+'</button><div style="margin-top:16px;border-top:1px solid var(--bd);padding-top:4px"><button class="sec" id="stop">'+t("stop")+'</button></div>';
+app.innerHTML=h;tick();
+app.querySelectorAll("button[data-c]").forEach(function(b){b.onclick=function(){ans.push(b.dataset.c==="1");i++;show()}});
+document.getElementById("stop").onclick=function(){fin()}}
+function confetti(){for(var k=0;k<46;k++){var s=document.createElement("span");s.className="cf";s.style.left=Math.random()*100+"vw";s.style.background=CONF[k%CONF.length];s.style.animationDuration=(2.5+Math.random()*2.5)+"s";s.style.animationDelay=(Math.random()*.8)+"s";document.body.appendChild(s);setTimeout(function(e){e.remove()},6500,s)}}
+function fin(re){
+scr="res";clearInterval(timer);if(!re)secs=Math.floor((Date.now()-t0)/1000);
+res={};var lv=-1,ok=true;miss=[];SC=[];
+L.forEach(function(l,n){var qs=0,c=0;Q.forEach(function(q,k){if(q[0]==l){qs++;if(ans[k])c++;else if(k<ans.length)miss.push(l+": "+q[1])}});res[l]=[c,qs];SC.push(l+" "+c+"/"+qs);
+if(ok&&c/qs>=0.66){lv=n}else ok=false});
+LV=lv<0?"Pre-A1":L[lv];
+var h=pills()+'<h1 class="c">'+t("well")+'</h1><p class="c m">'+t("ans").replace("{a}",ans.length).replace("{b}",Q.length)+'</p><div class="big">'+LV+'</div><p class="c" style="font-weight:800;margin-top:0">'+(lv<0?t("beg"):NM[LV][lang])+'</p>'+stairs(lv)+'<p class="c">'+CANL[lv<0?"A0":LV][lang]+'</p>';
+L.forEach(function(l){var r=res[l];h+='<div class="row"><b>'+l+'</b><div class="t"><i style="width:'+(r[0]/r[1]*100)+'%"></i></div><span>'+r[0]+'/'+r[1]+'</span></div>'});
+h+='<div class="nx">'+(lv>=4?t("top"):t("nxt").replace("{l}",L[lv+1]))+'</div>';
+h+='<p class="m">'+t("note")+'</p>';
+msg=mkMsg();
+h+='<div class="box"><p style="font-weight:800;margin:0;font-size:1.15rem">'+t("ft")+'</p><p style="margin:6px 0">'+t("fs")+'</p><p class="free">'+t("free")+'</p><textarea id="tx" rows="5" readonly></textarea><button id="cp" class="pri">'+t("cp")+'</button></div>';
+h+='<button class="sec" onclick="start()">'+t("again")+'</button>';
+app.innerHTML=h;
+document.getElementById("tx").value=msg;
+document.getElementById("cp").onclick=function(){var x=document.getElementById("tx");x.select();try{navigator.clipboard.writeText(msg)}catch(e){try{document.execCommand("copy")}catch(e2){}}this.textContent=t("cpd")};
+if(!re){window.scrollTo(0,0);confetti()}}
+function mkMsg(){return MSG[lang].replace("{lv}",LV).replace("{sc}",SC.join(", ")).replace("{a}",ans.length).replace("{b}",Q.length).replace("{m}",Math.floor(secs/60)).replace("{s}",secs%60)}
+start();
+</script></body></html>
