@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Julia · Spanish &amp; English · Test / Тест</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#fff3d9;--bg2:#e9f0ff;
+  --card:#ffffff;--tx:#1f2233;--mut:#5d637c;--bd:#e6e8f1;
+  --es:#aa151b;--es2:#f1bf00;--es-soft:#fff0b8;
+  --en:#1f3a93;--en2:#c8102e;--en-soft:#d9e1fb;
+  --note:#fff7e0;--note-bd:#f1d58a;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg1:#2a2113;--bg2:#12172e;
+    --card:#232842;--tx:#f1f2f8;--mut:#b3b8d4;--bd:#383f66;
+    --es:#ff6b70;--es2:#ffd23f;--es-soft:#4a3a14;
+    --en:#8aa4ff;--en2:#ff5c72;--en-soft:#2a3566;
+    --note:#2d2a1c;--note-bd:#5c5126;
+  }
+}
+:root[data-theme="dark"]{
+  --bg1:#2a2113;--bg2:#12172e;
+  --card:#232842;--tx:#f1f2f8;--mut:#b3b8d4;--bd:#383f66;
+  --es:#ff6b70;--es2:#ffd23f;--es-soft:#4a3a14;
+  --en:#8aa4ff;--en2:#ff5c72;--en-soft:#2a3566;
+  --note:#2d2a1c;--note-bd:#5c5126;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  background:linear-gradient(160deg,var(--bg1),var(--bg2)) fixed;
+  color:var(--tx);
+  font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.55;
+  padding:20px 16px 40px;
+}
+.wrap{max-width:720px;margin:0 auto}
+
+/* hero */
+.hero{text-align:center;padding:18px 4px 8px}
+.hero h1{font-size:clamp(1.7rem,6vw,2.5rem);line-height:1.15;margin:0 0 6px;font-weight:900}
+.hero h1 + h1{color:var(--mut);font-size:clamp(1.25rem,4.5vw,1.8rem);font-weight:700;margin-bottom:16px}
+.hero p{margin:6px auto;max-width:56ch}
+.hero .ru,.hero .et,.hero .enx{color:var(--mut)}
+.lede{margin-top:14px}
+
+/* test cards */
+.tests{display:grid;gap:18px;margin-top:22px}
+.test{
+  display:block;text-decoration:none;color:inherit;
+  background:var(--card);border-radius:24px;overflow:hidden;
+  border:2px solid var(--bd);
+  box-shadow:0 12px 36px rgba(31,34,51,.12);
+  transition:transform .15s,border-color .15s;
+}
+.test:hover,.test:focus-visible{transform:translateY(-2px)}
+.test:focus-visible{outline:3px solid var(--tx);outline-offset:3px}
+.test.es:hover,.test.es:focus-visible{border-color:var(--es)}
+.test.en:hover,.test.en:focus-visible{border-color:var(--en)}
+.band{display:flex;align-items:center;gap:16px;padding:18px 22px}
+.es .band{background:var(--es-soft)}
+.en .band{background:var(--en-soft)}
+.flag{flex:none;width:92px;height:auto;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.band h2{margin:0;font-size:1.45rem;line-height:1.2;font-weight:900}
+.es .band h2{color:var(--es)}
+.en .band h2{color:var(--en)}
+.band p{margin:2px 0 0;font-weight:700}
+.body{padding:16px 22px 22px}
+.body p{margin:0 0 4px}
+.body .ru,.body .et,.body .enx{color:var(--mut)}
+.btn{
+  display:block;margin-top:16px;padding:14px 18px;border-radius:14px;
+  text-align:center;font-weight:900;font-size:1.05rem;color:#fff;line-height:1.3;
+}
+.btn small{display:block;font-weight:700;font-size:.9rem;opacity:.92}
+.es .btn{background:linear-gradient(135deg,#aa151b,#d62d33)}
+.en .btn{background:linear-gradient(135deg,#1f3a93,#3b55c4)}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .es .btn{background:linear-gradient(135deg,#c9272d,#e04448)}
+  :root:not([data-theme="light"]) .en .btn{background:linear-gradient(135deg,#3552c4,#4c69dc)}
+}
+
+/* free lesson + humour */
+.gift,.joke{border-radius:20px;padding:18px 22px;margin-top:22px}
+.gift{background:var(--card);border:2px dashed var(--es2)}
+.gift p,.joke p{margin:0 0 4px}
+.gift .ru,.joke .ru,.gift .et,.joke .et,.gift .enx,.joke .enx{color:var(--mut)}
+.gift strong{font-weight:900}
+.joke{background:var(--note);border:2px solid var(--note-bd)}
+footer{text-align:center;color:var(--mut);margin-top:26px;font-size:.9rem}
+
+@media (max-width:460px){
+  .flag{width:72px}
+  .band{padding:16px}
+  .body,.gift,.joke{padding-left:16px;padding-right:16px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1 lang="es">¿Qué idioma quieres aprender conmigo?</h1>
+    <h1 lang="en">Which language would you like to learn with me?</h1>
+    <h1 lang="et">Millist keelt tahad minuga õppida?</h1>
+    <h1 lang="ru">Какой язык вы хотите изучать со мной?</h1>
+    <p class="lede" lang="es">Por favor, elige un idioma y haz el test. Los tests son muy rápidos y sencillos, pero te darán una idea aproximada de tu nivel.</p>
+    <p class="enx lede" lang="en">Please choose a language and take the test. The diagnostic tests are very quick and simple, but they will give you a rough idea of your level.</p>
+    <p class="et lede" lang="et">Palun vali keel ja tee test. Testid on väga kiired ja lihtsad, kuid annavad sulle ligikaudse ettekujutuse sinu tasemest.</p>
+    <p class="ru lede" lang="ru">Пожалуйста, выберите язык и пройдите тест. Тесты очень быстрые и простые, но они дают примерное представление о вашем уровне.</p>
+  </header>
+
+  <main class="tests">
+
+    <!-- 1. SPANISH -->
+    <a class="test es" href="spanish.html" lang="es">
+      <div class="band">
+        <svg class="flag" viewBox="0 0 90 60" role="img" aria-label="Bandera de España">
+          <rect width="90" height="60" fill="#aa151b"/>
+          <rect y="15" width="90" height="30" fill="#f1bf00"/>
+        </svg>
+        <div>
+          <h2>Test de nivel de español</h2>
+          <p>Descubre tu nivel, de A1 a C1.</p>
+        </div>
+      </div>
+      <div class="body">
+        <p class="enx" lang="en">Spanish diagnostic test: find out your level, from A1 to C1.</p>
+        <p class="et" lang="et">Hispaania keele tasemetest: uuri välja oma tase A1-st C1-ni.</p>
+        <p class="ru" lang="ru">Тест на уровень испанского: узнайте свой уровень от A1 до C1.</p>
+        <span class="btn">Empezar el test
+          <small lang="en">Start the test</small>
+          <small lang="et">Alusta testi</small>
+          <small lang="ru">Начать тест</small>
+        </span>
+      </div>
+    </a>
+
+    <!-- 2. ENGLISH -->
+    <a class="test en" href="english.html" lang="en">
+      <div class="band">
+        <svg class="flag" viewBox="0 0 60 36" role="img" aria-label="Flag of the United Kingdom">
+          <rect width="60" height="36" fill="#1f3a93"/>
+          <path d="M0 0L60 36M60 0L0 36" stroke="#fff" stroke-width="7"/>
+          <path d="M0 0L60 36M60 0L0 36" stroke="#c8102e" stroke-width="2.4"/>
+          <path d="M30 0v36M0 18h60" stroke="#fff" stroke-width="11"/>
+          <path d="M30 0v36M0 18h60" stroke="#c8102e" stroke-width="6.5"/>
+        </svg>
+        <div>
+          <h2>English level test</h2>
+          <p>Find out your level, from A1 to C1.</p>
+        </div>
+      </div>
+      <div class="body">
+        <p lang="en">English diagnostic test: find out your level, from A1 to C1.</p>
+        <p lang="es">Test de nivel de inglés: descubre tu nivel de A1 a C1.</p>
+        <p class="et" lang="et">Inglise keele tasemetest: uuri välja oma tase A1-st C1-ni.</p>
+        <p class="ru" lang="ru">Тест на уровень английского: узнайте свой уровень от A1 до C1.</p>
+        <span class="btn">Start the test
+          <small lang="es">Empezar el test</small>
+          <small lang="et">Alusta testi</small>
+          <small lang="ru">Начать тест</small>
+        </span>
+      </div>
+    </a>
+
+  </main>
+
+  <section class="gift" aria-label="Clase gratis / Tasuta tund / Бесплатный урок">
+    <p lang="es">🎁 <strong>¡Envíame tu resultado y recibe una clase gratis!</strong> Me hará mucha ilusión leer tu opinión.</p>
+    <p class="enx" lang="en">🎁 <strong>Send me your result and get a free lesson!</strong> I’d love to hear what you think.</p>
+    <p class="et" lang="et">🎁 <strong>Saada mulle oma tulemus ja saa tasuta tund!</strong> Mul on väga hea meel sinu arvamust lugeda.</p>
+    <p class="ru" lang="ru">🎁 <strong>Отправьте мне свой результат и получите бесплатный урок!</strong> Буду очень рада вашему отзыву.</p>
+  </section>
+
+  <section class="joke" aria-label="Si algo no funciona / Kui miski ei tööta / Если что-то не работает">
+    <p lang="es">🛠️ Si algo no funciona, por favor dímelo. Soy profesora, no ingeniera informática 😄 ¡Gracias de antemano, intento ser todo en una sola persona!</p>
+    <p class="enx" lang="en">🛠️ If something doesn’t work, please let me know. I’m a teacher, not an IT engineer 😄 Thanks in advance, I’m trying to be everything in one person!</p>
+    <p class="et" lang="et">🛠️ Kui miski ei tööta, palun anna mulle teada. Ma olen õpetaja, mitte IT-insener 😄 Tänan ette, püüan olla kõik ühes isikus!</p>
+    <p class="ru" lang="ru">🛠️ Если что-то не работает, пожалуйста, сообщите мне. Я учитель, а не IT-инженер 😄 Заранее спасибо, я стараюсь быть всем в одном лице!</p>
+  </section>
+
+  <footer>
+    <span lang="es">¡Nos vemos en clase!</span> · <span lang="en">See you in class!</span> · <span lang="et">Kohtumiseni tunnis!</span> · <span lang="ru">До встречи на уроке!</span>
+  </footer>
+
+</div>
+</body>
+</html>
